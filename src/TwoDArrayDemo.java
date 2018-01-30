@@ -22,8 +22,9 @@ public class TwoDArrayDemo {
 		for(int r = 0; r < table.length; r++) {
 			//sub-row
 			for(int c = 0; c < table[r].length; c++) {
-				System.out.println(table[r][c]);
+				System.out.print(table[r][c] + "\t");
 			}
+			System.out.println();
 		}
 	}
 
