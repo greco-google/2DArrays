@@ -3,14 +3,24 @@ import java.util.Scanner;
 public class Square
 {
     int[][] square;
+    int size;
     int row;
     int col;
+    int lastRow;
+    int lastCol;
+    int matrixSize;
 
     //--------------------------------------
     //create new square of given size
     //--------------------------------------
     public Square(int size)
     {
+    	
+    	square = new int[size][size];
+    	row = 0;
+    	col = size / 2;
+    	matrixSize = size * size;
+    	square[row][col] = 1;
 
     }
 
