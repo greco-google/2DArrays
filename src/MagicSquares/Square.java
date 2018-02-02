@@ -6,6 +6,9 @@ public class Square {
 	//With the parts that I was unsure about, I used this link 
 	//which was very helpful...
 	//https://nfmy.wordpress.com/2015/01/29/magic-square/
+		//also Stack Overflow
+	//https://stackoverflow.com/questions/21641849/summing-up-each-row-and-column-in-java
+
     int[][] square;
     int row;
     int col;
