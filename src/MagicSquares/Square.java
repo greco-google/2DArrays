@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class Square
 {
     int[][] square;
+    int row;
+    int col;
 
     //--------------------------------------
     //create new square of given size
