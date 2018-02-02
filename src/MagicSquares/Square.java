@@ -1,9 +1,10 @@
+package MagicSquares;
+
 import java.util.Scanner;
 
 public class Square
 {
     int[][] square;
-    int size;
     int row;
     int col;
     int lastRow;
@@ -15,11 +16,15 @@ public class Square
     //--------------------------------------
     public Square(int size)
     {
-    	
-    	square = new int[size][size];
+    	Scanner input = new Scanner(System.in);
+	    System.out.println("Enter the size of an array:");
+	    Scanner user = new Scanner(System.in);
+	    int size1 =user.nextInt();
+	    
+    	square = new int[size1][size1];
     	row = 0;
-    	col = size / 2;
-    	matrixSize = size * size;
+    	col = size1 / 2;
+    	matrixSize = size1 * size1;
     	square[row][col] = 1;
 
     }
@@ -29,15 +34,32 @@ public class Square
     //--------------------------------------
     public int sumRow(int row)
     {
-
+    		System.out.println("The Magic Square for " + row + ":");
+        System.out.println("Sum of each row or column " + row * (row * row + 1) / 2 + ":");
+        for(int i = 0; i < row; i++){
+        	
+			for(int col = 0; col < row; col++)
+				
+			System.out.print(sumRow(row)+" ");
+			System.out.println();
+        }
+		return row;
     }
 
     //--------------------------------------
     //return the sum of the values in the given column
     //--------------------------------------
-    public int sumCol(int col)
-    {
-
+    public int sumCol(int col) {
+        		System.out.println("The Magic Square for " + col + ":");
+            System.out.println("Sum of each row or column " + col * (col * col + 1) / 2 + ":");
+            for(int i = 0; i < col; i++){
+            	
+    			for(int row = 0; row < col; col++)
+    				
+    			System.out.print(sumRow(col)+" ");
+    			System.out.println();
+            }
+    		return col;
     }
 
     //--------------------------------------
@@ -45,7 +67,7 @@ public class Square
     //--------------------------------------
     public int sumMainDiag()
     {
-
+//I dont know w
     }
 
     //--------------------------------------
