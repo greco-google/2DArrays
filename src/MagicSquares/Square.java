@@ -2,20 +2,22 @@ package MagicSquares;
 
 import java.util.Scanner;
 
-public class Square
-{
+public class Square {
+	//With the parts that I was unsure about, I used this link 
+	//which was very helpful...
+	//https://nfmy.wordpress.com/2015/01/29/magic-square/
     int[][] square;
     int row;
     int col;
     int lastRow;
     int lastCol;
     int matrixSize;
+    boolean magic = true;
 
     //--------------------------------------
     //create new square of given size
     //--------------------------------------
-    public Square(int size)
-    {
+    public Square(int size) {
     	Scanner input = new Scanner(System.in);
 	    System.out.println("Enter the size of an array:");
 	    Scanner user = new Scanner(System.in);
@@ -32,8 +34,7 @@ public class Square
     //--------------------------------------
     //return the sum of the values in the given row
     //--------------------------------------
-    public int sumRow(int row)
-    {
+    public int sumRow(int row) {
     		System.out.println("The Magic Square for " + row + ":");
         System.out.println("Sum of each row or column " + row * (row * row + 1) / 2 + ":");
         for(int i = 0; i < row; i++){
@@ -43,7 +44,7 @@ public class Square
 			System.out.print(sumRow(row)+" ");
 			System.out.println();
         }
-		return row;
+		return sumRow(row);
     }
 
     //--------------------------------------
@@ -53,29 +54,39 @@ public class Square
         		System.out.println("The Magic Square for " + col + ":");
             System.out.println("Sum of each row or column " + col * (col * col + 1) / 2 + ":");
             for(int i = 0; i < col; i++){
-            	
-    			for(int row = 0; row < col; col++)
-    				
-    			System.out.print(sumRow(col)+" ");
-    			System.out.println();
+    				for(int row = 0; row < col; col++)
+    					System.out.print(sumRow(col)+" ");
+    					System.out.println();
             }
-    		return col;
+    		return sumCol(col);
     }
 
     //--------------------------------------
     //return the sum of the values in the main diagonal
     //--------------------------------------
-    public int sumMainDiag()
-    {
-//I dont know w
+    public int sumMainDiag() {
+    		for(int i = 0; i < 3; i++) {
+    			for(int j = 0; j < 3; j++) {
+    				if(i == j) {
+    					int sumDiag = square[i][j];	
+    				}
+    			}
+    		}
+			return sumMainDiag();
     }
 
     //--------------------------------------
     //return the sum of the values in the other ("reverse") diagonal
     //--------------------------------------
-    public int sumOtherDiag()
-    {
-
+    public int sumOtherDiag() {
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 3; j++) {
+				if((i + j) == 2) {
+					int sumDiag = square[i][j];	
+				}
+			}
+		}
+		return sumOtherDiag();
     }
 
     //--------------------------------------
@@ -84,7 +95,9 @@ public class Square
     //--------------------------------------
     public boolean magic()
     {
-
+    		if(magic) {
+    			System.out.println("It is a majic square");
+    		}
     }
 
     //--------------------------------------
@@ -103,7 +116,7 @@ public class Square
     //--------------------------------------
     public void printSquare()
     {
-
+    		System.out.println(square);
     }
 
 }
