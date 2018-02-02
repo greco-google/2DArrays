@@ -12,7 +12,6 @@ public class Square {
     int lastRow;
     int lastCol;
     int matrixSize;
-    boolean magic = true;
 
     //--------------------------------------
     //create new square of given size
@@ -95,9 +94,19 @@ public class Square {
     //--------------------------------------
     public boolean magic()
     {
-    		if(magic) {
-    			System.out.println("It is a majic square");
+
+			Object sumRow;
+			Object sumCol;
+			Object sumMainDiag = null;
+			Object sumOtherDiag;
+			
+			if((boolean) (sumRow = sumCol = sumMainDiag = sumMainDiag != null)) {
+    			System.out.println("It is a magic square! :)");
     		}
+    		else {
+    			System.out.println("It is not a magic square. :(");
+    		}
+			return false;
     }
 
     //--------------------------------------
