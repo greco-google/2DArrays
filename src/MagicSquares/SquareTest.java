@@ -19,17 +19,23 @@ Scanner scan = new Scanner(new File("magicData"));
 
 		System.out.println("\n******** Square " + count + " ********");
 		//print the square
-
+		System.out.println (magicSquare.Square(size));
+		
 		//print the sums of its rows
-
+		System.out.println (magicSquare.Square(row));
+		
 		//print the sums of its columns
-
+		System.out.println (magicSquare.Square(col));
+		
 		//print the sum of the main diagonal
-
+		System.out.println (magicSquare.Square(sumMainDiag));
+		
 		//print the sum of the other diagonal
-
+		System.out.println (magicSquare.Square(sumOtherDiag));
+		
 		//determine and print whether it is a magic square
-
+		System.out.println (magicSquare.Square(magic));
+		
 		//get size of next square
 		size = scan.nextInt();
 
