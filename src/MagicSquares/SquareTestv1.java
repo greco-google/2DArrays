@@ -1,6 +1,7 @@
+package MagicSquares;
 import java.util.Scanner;
 
-public class SquareTest
+public class SquareTestv1
 {
     public static void main(String[] args) throws IOException
     {
