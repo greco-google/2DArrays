@@ -9,7 +9,7 @@ public class SquareTest
 //watch video 5:00 min
     public static void main(String[] args) throws IOException
     {
-Scanner scan = new Scanner(new File("magicData"));
+Scanner scan = new Scanner(new File("magicData.txt"));
 
 	int count = 1;                 //count which square we're on
 	int size = scan.nextInt();     //size of next square
