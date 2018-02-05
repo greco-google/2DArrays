@@ -34,12 +34,12 @@ magicSquare.readSquare(scan);
 		//print the sums of its rows
 
 		for(int row = 0; row < size; row++) {
-			System.out.println("The sum of row #" + row + "is: " + magicSquare.sumRow(row));
+			System.out.println("The sum of row #" + row + " is: " + magicSquare.sumRow(row));
 }
 		//print the sums of its columns
 
 		for(int col = 0; col < size; col++) {
-			System.out.println("The sum of col #" + col + "is: " + magicSquare.sumCol(col));
+			System.out.println("The sum of col #" + col + " is: " + magicSquare.sumCol(col));
 }
 		//print the sum of the main diagonal
 			System.out.println("The sum of the main Diag is: " + magicSquare.sumMainDiag());
