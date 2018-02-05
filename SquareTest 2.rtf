@@ -1,0 +1,79 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fmodern\fcharset0 CourierNewPSMT;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww16440\viewh21420\viewkind0
+\deftab720
+\pard\pardeftab720\ri720\partightenfactor0
+
+\f0\fs28 \cf0 import java.util.Scanner;\
+\
+public class SquareTest\
+\{\
+//watch video 5:00 min\
+    public static void main(String[] args) throws IOException\
+    \{\
+\pard\pardeftab720\fi720\ri720\partightenfactor0
+\cf0 Scanner scan = new Scanner(new File("magicData.txt\'94));\
+\
+\pard\pardeftab720\ri720\partightenfactor0
+\cf0 	int count = 1;                 //count which square we're on\
+	int size = scan.nextInt();     //size of next square\
+\
+	//Expecting -1 at bottom of input file\
+	while (size != -1)\
+	    \{\
+\
+		//create a new Square of the given size\
+\
+		Suare magicSquare = new Square(size);\
+\
+		//call its read method to read the values of the square\
+\
+magicSquare..readSquare(scan);\
+\
+		System.out.println("\\n******** Square " + count + " ********");\
+		//print the square\
+\
+		magicSquare.PrintSquare();\
+\
+		//print the sums of its rows\
+\
+		for(int row = 0; row < size; row++) \{\
+			System.out.println(\'84The sum of row #\'84 + row + \'84is: \'84 + magicSquare.sumRow(row));\
+\}\
+		//print the sums of its columns\
+\pard\pardeftab720\ri720\partightenfactor0
+\cf0 \
+		for(int col = 0; col < size; col++) \{\
+			System.out.println(\'84The sum of col #\'84 + col + \'84is: \'84 + magicSquare.sumCol(col));\
+\}\
+\pard\pardeftab720\ri720\partightenfactor0
+\cf0 		//print the sum of the main diagonal\
+\pard\pardeftab720\ri720\partightenfactor0
+\cf0 			System.out.println(\'84The sum of the main Diag is: \'84 + magicSquare.sumMainDiag());\
+\
+\pard\pardeftab720\ri720\partightenfactor0
+\cf0 		//print the sum of the other diagonal\
+\pard\pardeftab720\ri720\partightenfactor0
+\cf0 			System.out.println(\'84The sum of the other Diag is: \'84 + magicSquare.sumOtherDiag());\
+\pard\pardeftab720\ri720\partightenfactor0
+\cf0 		//determine and print whether it is a magic square\
+		\
+		if(magicSquare.magic()) \{\
+		System.out.println(\'84Is a MAGIC SQUARE! :)\'94);\
+	\}\
+		else \{\
+\pard\pardeftab720\ri720\partightenfactor0
+\cf0 		System.out.println(\'84Is NOT a Magic Square. :(\'94);\
+\pard\pardeftab720\ri720\partightenfactor0
+\cf0 \}\
+		//get size of next square\
+		size = scan.nextInt();\
+		count++;\
+\
+	    \}\
+\
+   \}\
+\}\
+}
